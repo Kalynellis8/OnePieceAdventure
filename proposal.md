@@ -1,12 +1,14 @@
-OnePieceAdventure 
+# OnePieceAdventure 
 
-https://github.com/Kalynellis8/OnePieceAdventure
+ ## Repository 
+ 
+ https://github.com/Kalynellis8/OnePieceAdventure
 
-Description
+## Description
 
 OnePieceAdventure is a survival game where player control Luffy and dodge incoming One-Piece treasure items flying across the screen. The goal is to survive as long as possible while earning the highest score
 
-Features 
+## Features 
 
   - Player Movement
     
@@ -28,7 +30,7 @@ Features
     
       - Obstacles become faster as the game progresses
    
-Challenges
+## Challenges
 - Learning collision detection 
     
 - Managing multiple moving objects
@@ -37,34 +39,34 @@ Challenges
     
 - Creating smooth gameplay
 
-Outcomes 
+## Outcomes 
 
-Ideal Outcome: 
+### Ideal Outcome: 
 
   - A polished game featuring animations, sound effects, increasing difficulty, and an engaging score system
 
-Minimal Viable Outcome:
+### Minimal Viable Outcome:
 
    - A playable game where Luffy can move, dodge obstacles, and accumulate points
 
-Milestones
+## Milestones
 
-   -  Week 1
-          - Create project structure
-          - Add Luffy sprite and player movement
+  - ### Week 1
+      - Create project structure
+      - Add Luffy sprite and player movement
 
-  - week 2
+  - ### week 2
       - Add obstacle spawning
       - Add collision detection
    
-  - week 3
+  - ### week 3
       - Add score tracking
       - Add increasing difficulty
    
-  - week 4
+  - ### week 4
        - Add game over screen
        - Test and fix bugs
    
-  - week 5 (Final)
+  - ### week 5 (Final)
      - Polish Game
       - Finial testing and submission 
