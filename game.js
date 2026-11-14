@@ -5,7 +5,7 @@ ctx.fillStyle = "red";
 ctx.fillRect(100, 100, 100, 100);
 
 let player = {
-    x: 100,
+    x: 300,
     y: 100, 
     width: 80,
     height: 80
