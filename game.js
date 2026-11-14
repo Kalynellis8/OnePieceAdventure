@@ -10,15 +10,7 @@ let player = {
     speed: 5
 };
 
-function drawPlayer(){ 
-    ctx.fillStyle = "red";
-    ctx.fillRect( 
-        player.x,
-        player.y,
-        player.width,
-        player.height
-    );
-}
+
 let keys = {};
 
 document.addEventListener("keydown", function(event) {
@@ -43,6 +35,15 @@ function movePlayer() {
         player.x += player.speed;
     }
 }
+function drawPlayer(){ 
+    ctx.fillStyle = "red";
+    ctx.fillRect( 
+        player.x,
+        player.y,
+        player.width,
+        player.height
+    );
+}
 
 function gameLoop() {
 
@@ -52,7 +53,7 @@ function gameLoop() {
 
     drawPlayer();
 
-    requestAnimationFrame(gameLoopp);
+    requestAnimationFrame(gameLoop);
 
 }
 
