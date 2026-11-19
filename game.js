@@ -82,6 +82,12 @@ function moveObstacles() {
 
         obstacles[i].x -= obstacles[i].speed;
 
+                if(obstacles[i].x +
+            obstacles[i].widith < 0) {
+                        obstacles.splice(i,1);
+            }
+
+        
     }
 }
 function gameLoop() {
