@@ -76,11 +76,21 @@ function spawnObstacles() {
         speed: 4
     });
 }
+function moveObstacles() {
+
+    for(let i = 0; i < obstacles.length; i++) {
+
+        obstacles[i].x -= obstacles[i].speed;
+
+    }
+}
 function gameLoop() {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     movePlayer();
+
+    moveObstacles();
 
     drawPlayer();
 
