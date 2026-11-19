@@ -13,6 +13,8 @@ let player = {
 
 let keys = {};
 
+let obstacles = {};
+
 document.addEventListener("keydown", function(event) {
     keys[event.key] = true;
 });
@@ -48,7 +50,15 @@ function drawPlayer(){
         player.height
     );
 }
-
+function spawnObstacles() {
+    obstacles.push({
+        x: canvas.width,
+        y: Math.random() * (canvas.height - 50),
+        width: 50,
+        height: 50,
+        speed: 4
+    });
+}
 function gameLoop() {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
