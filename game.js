@@ -13,7 +13,7 @@ let player = {
 
 let keys = {};
 
-let obstacles = {};
+let obstacles = [];
 
 document.addEventListener("keydown", function(event) {
     keys[event.key] = true;
@@ -53,6 +53,8 @@ function drawPlayer(){
 function drawObstacles() {
     ctx.fillStyle = "gold";
 
+    console.log("Obstacles:", obstacles.length);
+
     for(let i = 0; i < obstacles.length; i++) {
         ctx.fillRect(
             obstacles[i].x,
@@ -63,8 +65,11 @@ function drawObstacles() {
     }
 }
 function spawnObstacles() {
+    
+    console.log("Spawning obstacle");
+    
     obstacles.push({
-        x: canvas.width,
+        x: 700,
         y: Math.random() * (canvas.height - 50),
         width: 50,
         height: 50,
@@ -84,6 +89,7 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 
 }
+
 setInterval(spawnObstacles, 2000);
 
 gameLoop();
