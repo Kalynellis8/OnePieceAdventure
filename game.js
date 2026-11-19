@@ -83,11 +83,30 @@ function moveObstacles() {
         obstacles[i].x -= obstacles[i].speed;
 
                 if(obstacles[i].x +
-            obstacles[i].widith < 0) {
+            obstacles[i].width < 0) {
                         obstacles.splice(i,1);
             }
 
         
+    }
+}
+function checkCollisions() {
+
+    for(let i = 0; i < obstacles.length; i++) {
+        
+        if(
+            player.x < obstacles[i].x +
+    obstacles[i].width&&
+                player.x + player.width > obstacles[i].x&&
+
+                player.y < obstacles[i].y +
+    obstacles[i].height&&
+                player.y + player.height > obstacles[i].y
+    
+        ) {
+            
+            console.log("GAME OVER");
+        }
     }
 }
 function gameLoop() {
@@ -97,6 +116,8 @@ function gameLoop() {
     movePlayer();
 
     moveObstacles();
+
+    checkCollisions();
 
     drawPlayer();
 
