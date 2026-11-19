@@ -15,6 +15,8 @@ let keys = {};
 
 let obstacles = [];
 
+let gameOver = false;
+
 document.addEventListener("keydown", function(event) {
     keys[event.key] = true;
 });
@@ -104,13 +106,17 @@ function checkCollisions() {
                 player.y + player.height > obstacles[i].y
     
         ) {
-            
+           gameOver = true;
             console.log("GAME OVER");
         }
     }
 }
 function gameLoop() {
 
+
+    if(gameOver) {
+        return;
+    }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     movePlayer();
