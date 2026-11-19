@@ -50,6 +50,18 @@ function drawPlayer(){
         player.height
     );
 }
+function drawObstacles() {
+    ctx.fillStyle = "gold";
+
+    for(let i = 0; i < obstacles.length; i++) {
+        ctx.fillRect(
+            obstacles[i].x,
+            obstacles[i].y,
+            obstacles[i].width,
+            obstacles[i].height
+        );
+    }
+}
 function spawnObstacles() {
     obstacles.push({
         x: canvas.width,
@@ -67,9 +79,12 @@ function gameLoop() {
 
     drawPlayer();
 
+    drawObstacles();
+
     requestAnimationFrame(gameLoop);
 
 }
+setInterval(spawnObstacles, 2000);
 
 gameLoop();
 
