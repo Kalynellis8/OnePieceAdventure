@@ -15,6 +15,8 @@ let keys = {};
 
 let obstacles = [];
 
+let obstacleSpeed = 4;
+
 let score = 0;
 
 let gameOver = false;
@@ -87,14 +89,14 @@ function spawnObstacles() {
         y: Math.random() * (canvas.height - 50),
         width: 50,
         height: 50,
-        speed: 4
+        speed: obstacleSpeed
     });
 }
 function moveObstacles() {
 
     for(let i = 0; i < obstacles.length; i++) {
 
-        obstacles[i].x -= obstacles[i].speed;
+        obstacles[i].x -= obstacleSpeed;
 
                 if(obstacles[i].x +
             obstacles[i].width < 0) {
@@ -156,7 +158,24 @@ function updateGame() {
 setInterval(spawnObstacles, 2000);
 
 setInterval(function() {
-    score++;
+
+    score ++;
+
+    if(score === 10) {
+        obstacleSpeed = 5;
+        console.log("Difficulty Increased!");
+    }
+
+    if(score === 20) {
+        obstacleSpeed = 6;
+        console.log("Difficulty Increased!");
+    }
+
+    if(score === 30) { 
+        obstacleSpeed = 7;
+        console.log("Difficulty Increased!");
+    }
+
 }, 1000);
 
 gameLoop();
