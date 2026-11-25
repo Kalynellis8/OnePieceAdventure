@@ -131,8 +131,6 @@ function gameLoop() {
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    updateGame();
-
     movePlayer();
 
     moveObstacles();
@@ -156,6 +154,10 @@ function updateGame() {
 
 
 setInterval(spawnObstacles, 2000);
+
+setInterval(function() {
+    score++;
+}, 1000);
 
 gameLoop();
 
