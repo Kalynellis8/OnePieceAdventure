@@ -68,6 +68,16 @@ function drawObstacles() {
         );
     }
 }
+
+function drawGame() {
+
+    // draw player 
+
+    ctx.fillStyle = "white";
+    ctx.font = "30px Arial";
+    ctx.fillText("Score: " + score, 20, 40);
+}
+
 function spawnObstacles() {
     
     console.log("Spawning obstacle");
