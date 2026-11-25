@@ -73,7 +73,7 @@ function drawGame() {
 
     // draw player 
 
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "red";
     ctx.font = "30px Arial";
     ctx.fillText("Score: " + score, 20, 40);
 }
@@ -130,6 +130,8 @@ function gameLoop() {
         return;
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    updateGame();
 
     movePlayer();
 
@@ -140,6 +142,8 @@ function gameLoop() {
     drawPlayer();
 
     drawObstacles();
+
+    drawGame();
 
     requestAnimationFrame(gameLoop);
 
