@@ -75,7 +75,7 @@ function drawGame() {
 
     ctx.fillStyle = "red";
     ctx.font = "30px Arial";
-    ctx.fillText("Score: " + score, 20, 40);
+    ctx.fillText("Score: " + Math.floor(score),20,40); 
 }
 
 function spawnObstacles() {
@@ -151,7 +151,7 @@ function gameLoop() {
 
 function updateGame() {
 
-    score++;
+    score += 0.1;
 }
 
 
