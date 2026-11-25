@@ -15,6 +15,8 @@ let keys = {};
 
 let obstacles = [];
 
+let score = 0;
+
 let gameOver = false;
 
 document.addEventListener("keydown", function(event) {
@@ -132,6 +134,12 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 
 }
+
+function updateGame() {
+
+    score++;
+}
+
 
 setInterval(spawnObstacles, 2000);
 
